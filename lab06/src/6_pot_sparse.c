@@ -175,7 +175,7 @@ void fill_matrix(double* a, int* ja, int* ia, double* b, int N_X, int N_Y, int E
 }
 
 double epsilon_l(int l, int EPSILON_1, int EPSILON_2, int N_X) {
-	return ((l <= N_X/2) ? EPSILON_1 : EPSILON_2);
+	return ((get_i(l, N_X) <= N_X/2) ? EPSILON_1 : EPSILON_2);
 }
 
 int get_j(int l, int N_X) { return floor(l / (N_X + 1.0)); }
